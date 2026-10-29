@@ -1,1 +1,111 @@
-## Hola
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Un recuerdo para ti</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ENTRADA: portada, corazón y mensaje -->
+<div id="gate">
+  <section class="pane" id="p1">
+    <div class="eyebrow">Un regalo</div>
+    <div class="from" id="lblPara"></div>
+    <div class="to" id="toName"></div>
+    <div class="from">Con todo mi cariño, <i id="fromName"></i></div>
+    <div class="hint">desliza hacia abajo</div>
+    <button class="arrow" id="go" aria-label="Continuar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </button>
+  </section>
+
+  <section class="pane below" id="p2">
+    <div class="eyebrow">Toca el corazón</div>
+    <button id="heart" aria-label="Corazón">
+      <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.3C1 8.4 3 5 6.3 5c2 0 3.7 1.1 5.7 3.3C14 6.1 15.7 5 17.7 5 21 5 23 8.4 21.6 11.7 19.5 16.4 12 21 12 21z"/></svg>
+    </button>
+    <div class="dots" id="dots"></div>
+    <div class="hint static">3 toques para abrir</div>
+  </section>
+
+  <section class="pane below" id="msg">
+    <h2>Has abierto tu regalo<br>— <em>un recuerdo creado especialmente para ti</em></h2>
+  </section>
+</div>
+
+<!-- CONTENIDO PRINCIPAL (se construye desde js/config.js) -->
+<main id="main"><div class="wrap">
+  <div class="top">
+    <div class="av"><span>♡</span></div>
+    <div><b id="topTitle"></b><small id="topSub"></small></div>
+  </div>
+
+  <div class="ph hero" id="hero"></div>
+
+  <div class="sec" id="secAudio">
+    <div class="lab">Mensaje de voz</div>
+    <div class="card"><audio id="aud" controls preload="none"></audio></div>
+  </div>
+
+  <div class="sec" id="secSpotify">
+    <div class="lab">Nuestra canción</div>
+    <div class="card" id="spOut"></div>
+  </div>
+
+  <div class="sec">
+    <div class="lab">Galería</div>
+    <div class="gal" id="gal"></div>
+  </div>
+
+  <div class="sec letter">
+    <h2 id="letterTitle"></h2>
+    <div id="letter"></div>
+  </div>
+
+  <div class="sec count">
+    <div class="lab">Juntos desde</div>
+    <h3 id="sinceTxt"></h3>
+    <div class="big" id="days">0</div>
+    <div class="sub">días amándonos</div>
+    <div class="parts">
+      <div><b id="yy">0</b>años</div><div><b id="mm">0</b>meses</div><div><b id="dd">0</b>días</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="lab">Momentos especiales</div>
+    <div id="moments"></div>
+  </div>
+
+  <div class="sec">
+    <div class="lab">Una invitación para ti</div>
+    <div class="env" id="env">
+      <div class="seal"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 21s-7.5-4.6-9.6-9.3C1 8.4 3 5 6.3 5c2 0 3.7 1.1 5.7 3.3C14 6.1 15.7 5 17.7 5 21 5 23 8.4 21.6 11.7 19.5 16.4 12 21 12 21z"/></svg></div>
+      <h3>Tienes una invitación</h3>
+      <div class="env-sub">Toca para abrir</div>
+    </div>
+    <div class="inv" id="inv">
+      <div class="ph" id="invPhoto"></div>
+      <div class="in">
+        <h3 id="invTitle"></h3>
+        <dl>
+          <div><dt>Fecha y hora</dt><dd id="invWhen"></dd></div>
+          <div><dt>Lugar</dt><dd id="invWhere"></dd></div>
+        </dl>
+        <p id="invText"></p>
+        <a class="btn fill" id="next" href="#">Continuar →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot" id="foot"></div>
+</div></main>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+CARPETA DE AUDIO
+Coloca aquí tu audio con el nombre:
+
+  mensaje.mp3
+
+Si usas otro nombre o formato (m4a, wav...), cambia la ruta "audio" en js/config.js.

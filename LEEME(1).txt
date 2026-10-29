@@ -1,0 +1,10 @@
+CARPETA DE IMÁGENES
+Coloca aquí tus fotos con estos nombres exactos (JPG):
+
+  principal.jpg                    -> foto principal
+  galeria-1.jpg ... galeria-9.jpg  -> las 9 fotos de la galería
+  momento-1.jpg ... momento-3.jpg  -> los 3 momentos especiales
+  invitacion.jpg                   -> foto de la tarjeta de invitación
+
+Si usas otro nombre o formato (png, webp...), cambia la ruta en js/config.js.
+Recomendado: fotos de máximo 1600 px de ancho para que carguen rápido en el celular.
